@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peak Sales | Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom Styles */
+    .hero-section {
+      background: linear-gradient(to right, #4e73df, #1cc88a);
+      color: white;
+      padding: 80px 0;
+    }
+    .contact-card {
+      border: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 30px 0;
+    }
+    footer a {
+      color: #1cc88a;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Peak Sales</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Contact Us</h1>
+      <p class="lead">We’d love to hear from you. Get in touch with us for inquiries or collaboration opportunities.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-4">Send Us a Message</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Type your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-md-6">
+          <div class="card contact-card p-4">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Contact Information</h5>
+              <p class="card-text">Feel free to reach out to us directly using the information below.</p>
+              <ul class="list-unstyled">
+                <li><strong>Email:</strong> support@peaksales.com</li>
+                <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                <li><strong>Address:</strong> 123 Peak Street, Business City, USA</li>
+              </ul>
+              <div>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2">Facebook</a>
+                <a href="#" class="btn btn-outline-primary btn-sm me-2">Twitter</a>
+                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468203!3d37.77492927975801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064df0a82e3%3A0x7c8f5475d8d76a7f!2s123%20Peak%20Street%2C%20Business%20City%2C%20USA!5e0!3m2!1sen!2sus!4v1615921692424!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">© 2024 Peak Sales. All Rights Reserved.</p>
+      <small><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
