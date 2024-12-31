@@ -3,67 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Peak Sales - Your trusted partner in driving business growth through expert sales solutions.">
+  <meta name="author" content="Karan Soni">
+  <meta name="robots" content="index, follow">
   <title>Peak Sales | Contact Us</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Custom Styles */
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-white.png" type="image/x-icon">
+  <style> 
     .hero-section {
-      background: linear-gradient(to right, #4e73df, #1cc88a);
-      color: white;
-      padding: 80px 0;
+        padding: 3rem 0;
+        min-height: 90vh;
     }
-    .contact-card {
-      border: none;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 30px 0;
-    }
-    footer a {
-      color: #1cc88a;
-      text-decoration: none;
-    }
+
+    /* Form Section */
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    color: var(--light-text);
+}
+
+.contact-card h2,
+.contact-card h3,
+.contact-card h4 {
+    color: var(--light-text);
+}
+
+.contact-card .form-label {
+    color: var(--light-text);
+}
+
+.contact-card .form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--light-text);
+}
+
+.contact-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-card .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(32, 189, 255, 0.25);
+}
+
+/* Social Links */
+.social-links .btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.social-links .btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+/* Map Section */
+.bg-light {
+    background-color: var(--dark-bg) !important;
+}
+
+.bg-light h2 {
+    color: var(--light-text);
+}
+
+/* Base background for sections */
+section:not(.hero-section) {
+    background-color: var(--dark-bg);
+}
+
+/* Contact Information Icons */
+.fas.fa-fw,
+.contact-card span {
+    color: var(--light-text);
+}
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Peak Sales</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="case-studies.html">case-studies</a></li> -->
-        </ul>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="Peak Sales Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+      Peak Sales
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-center">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Contact Us</h1>
-      <p class="lead">We’d love to hear from you. Get in touch with us for inquiries or collaboration opportunities.</p>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="hero-section gradient-bg text-center" id="hero-section">
+  <div class="container">
+    <h1 class="display-4 fw-bold text-white-50" data-aos="fade-up">Get in Touch</h1>
+    <p class="lead text-white-75" data-aos="fade-up" data-aos-delay="200">We'd love to hear from you. Reach out for inquiries or collaboration opportunities.</p>
+  </div>
+</section>
 
-  <!-- Contact Form Section -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Contact Form -->
-        <div class="col-md-6">
+<!-- Contact Form Section -->
+<section class="py-5">
+  <div class="container" id="contact-form-section">
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="card contact-card p-4">
           <h2 class="fw-bold mb-4">Send Us a Message</h2>
           <form>
             <div class="mb-3">
@@ -78,49 +136,130 @@
               <label for="message" class="form-label">Message</label>
               <textarea class="form-control" id="message" rows="5" placeholder="Type your message" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg">Submit Message</button>
           </form>
         </div>
+      </div>
 
-        <!-- Contact Information -->
-        <div class="col-md-6">
-          <div class="card contact-card p-4">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Contact Information</h5>
-              <p class="card-text">Feel free to reach out to us directly using the information below.</p>
-              <ul class="list-unstyled">
-                <li><strong>Email:</strong> support@peaksales.com</li>
-                <li><strong>Phone:</strong> +1 (555) 123-4567</li>
-                <li><strong>Address:</strong> 123 Peak Street, Business City, USA</li>
-              </ul>
-              <div>
-                <a href="#" class="btn btn-outline-primary btn-sm me-2">Facebook</a>
-                <a href="#" class="btn btn-outline-primary btn-sm me-2">Twitter</a>
-                <a href="#" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+      <!-- Contact Information -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card contact-card p-4">
+          <div class="card-body">
+            <h3 class="fw-bold mb-4">Contact Information</h3>
+            <div class="mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-envelope fa-fw me-2"></i>
+                <span>peakksales.in@gmail.com</span>
               </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-phone fa-fw me-2"></i>
+                <span>+91 9487788078</span>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-map-marker-alt fa-fw me-2"></i>
+                <span>5/291b spm nager, vannakovil, Navalur kuttappattu, Trichy - 620009</span>
+              </div>
+            </div>
+            <h4 class="fw-bold mb-3">Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/peaksales.in" class="btn btn-outline-primary me-2" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com" class="btn btn-outline-primary me-2" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://www.twitter.com" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Map Section -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">Find Us</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.41941548468203!3d37.77492927975801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064df0a82e3%3A0x7c8f5475d8d76a7f!2s123%20Peak%20Street%2C%20Business%20City%2C%20USA!5e0!3m2!1sen!2sus!4v1615921692424!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- Map Section -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4" data-aos="fade-up">Find Us</h2>
+    <div data-aos="fade-up" data-aos-delay="200">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.681478147045!2d80.22672691538544!3d10.80303759243391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52ee35189757cd%3A0xf1f3a1b9f4f0f4d3!2s5%2F291b%20spm%20nager%2C%20vannakovil%2C%20Navalur%20kuttappattu%2C%20Trichy%20-%20620009!5e0!3m2!1sen!2sin!4v1675245617855!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-0">© 2024 Peak Sales. All Rights Reserved.</p>
-      <small><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <!-- Company Overview Section -->
+    <div class="footer-section company-overview">
+      <a href="index.html">
+        <img src="assets/images/logo-white.png" alt="Peak Sales Logo" class="footer-logo" style="width: 40px; height: 40px; margin-right: 10px;">
+      </a>
+    </div>    
+    
+    <!-- Quick Links Section -->
+    <div class="footer-section quick-links">
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-list">
+        <li><a href="index.html#services-section">Services</a></li>
+        <li><a href="blog.html#latest-posts">Latest Articles</a></li>
+        <li><a href="blog.html#newsletter">Subscribe to our Newsletter</a></li>
+        <li><a href="contact.html#contact-form-section">Send Us a Message</a></li>
+        <li><a href="index.html">Home</a></li>        
+      </ul>
     </div>
-  </footer>
+    
+    <!-- Contact and Social Links Section -->
+    <div class="footer-section contact-social">
+      <h4 class="footer-heading">Connect with Us</h4>
+      <ul class="footer-list">
+        <li><a href="mailto:peakksales.in@gmail.com" aria-label="Email us">Email Us</a></li>
+        <li><a href="https://www.instagram.com/peaksales.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter X"><i class="fa-brands fa-x"></i> X (Twitter)</a></li>
+      </ul>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Legal Section -->
+    <div class="footer-section legal">
+      <h4 class="footer-heading">Legal</h4>
+      <ul class="footer-list">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center">
+    <p>&copy; 2024 Peak Sales. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+<script>
+  AOS.init();
+
+  // GSAP Animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero Section Animation
+  gsap.to("#hero-section", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#hero-section",
+      start: "top 80%",
+    },
+  });
+</script>
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>

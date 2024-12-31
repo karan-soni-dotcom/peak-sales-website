@@ -4,7 +4,7 @@
 a {
     text-decoration: none !important;
 }
-
+ 
 /* Color Palette */
 :root {
     --primary-color: #5433ff;
@@ -12,6 +12,79 @@ a {
     --accent-color: #20bdff;
     --dark-bg: #121212;
     --light-text: rgba(255, 255, 255, 0.87);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styling */
+
+/* Global Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;  /* Width for vertical scrollbar */
+    height: 12px; /* Height for horizontal scrollbar */
+}
+
+/* Scrollbar Track Styling (background) */
+::-webkit-scrollbar-track {
+    background: #333333;  /* Dark grey/black background for the track */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb Styling (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #000000;  /* Black color for the thumb */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);  /* Optional subtle border to add contrast */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Scrollbar Thumb Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #444444;  /* Slightly lighter black on hover */
+}
+
+/* Optional: Scrollbar Corner (bottom-right) */
+::-webkit-scrollbar-corner {
+    background-color: transparent;  /* Transparent corner */
+}
+
+/* Firefox Scrollbar Styling (using scrollbar-width and scrollbar-color) */
+* {
+    scrollbar-width: thin;  /* Thin scrollbar for Firefox */
+    scrollbar-color: #000000 #333333;  /* Thumb color and track color in Firefox */
+}
+
+/* Mobile Layout Consideration */
+@media (max-width: 767px) {
+    /* Hide scrollbar on mobile if it's not essential */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* Specific Scrollbar Styles for Content Areas */
+.content-panel {
+    overflow-y: auto;
+    max-height: 80vh;
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #333333;  /* Custom scrollbar on these elements */
+}
+
+/* Additional custom scrollbar styling for all overflow elements */
+.content-panel::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.content-panel::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.content-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #444444;  /* Darker shade of black for hover effect */
 }
 
 /* Responsive Typography */
@@ -139,6 +212,7 @@ body {
     }
 }
 
+/* Section Styling */
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
@@ -168,7 +242,6 @@ body {
     margin: 0 auto;
 }
 
-/* Section Styling */
 /* Services Section */
 .services-section {
     min-height: 100vh;
@@ -190,6 +263,7 @@ body {
 }
 
 /* Service Cards */
+/* Container Styles */
 .services-container {
     overflow-y: auto;
     max-height: 80vh;
@@ -207,6 +281,15 @@ body {
     border-radius: 3px;
 }
 
+/* Grid Layout */
+.services-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    position: relative;
+}
+
+/* Service Cards */
 .service-cards {
     display: flex;
     flex-direction: column;
@@ -231,6 +314,20 @@ body {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 40px var(--secondary-color);
     border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Icons and Headings */
+.service-card i {
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 /* Content Panel */
@@ -265,12 +362,16 @@ body {
     }
 
     .content-panel {
-        position: relative;
-        top: 0;
+        display: none; /* Hide right panel on mobile */
     }
 
-    .content-wrapper {
-        max-height: none;
+    .services-container {
+        max-height: none; /* Remove height restriction on mobile */
+    }
+
+    .service-card {
+        transform: none; /* Remove transform effect on mobile */
+        opacity: 1; /* Keep cards fully visible on mobile */
     }
 }
 

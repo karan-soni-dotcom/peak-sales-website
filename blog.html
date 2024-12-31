@@ -3,128 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peak Sales Blog - Latest trends and insights in sales strategies.">
+  <meta name="author" content="Karan Soni">
+  <meta name="robots" content="index, follow">
   <title>Peak Sales | Blog</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-white.png" type="image/x-icon">
   <style>
-    /* Custom Styles */
     .hero-section {
-      background: linear-gradient(to right, #1cc88a, #4e73df);
-      color: white;
-      padding: 80px 0;
+        padding: 3rem 0;
+        min-height: 90vh;
     }
-    .blog-card {
-      transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* Black text color for mission and journey sections */
+    .bg-light h2,
+    .bg-light p {
+        color: #000;
     }
-    .blog-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    /* Latest Posts Section Styling */
+#latest-posts {
+    background-color: var(--dark-bg);
+    padding: 5rem 0;
+}
+
+#latest-posts .card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#latest-posts .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#latest-posts .card-body {
+    padding: 1.5rem;
+}
+
+#latest-posts .card-title {
+    color: var(--light-text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#latest-posts .card-text {
+    color: var(--light-text);
+    opacity: 0.8;
+}
+
+#latest-posts .text-muted {
+    color: var(--light-text) !important;
+    opacity: 0.6;
+}
+
+#latest-posts h2 {
+    color: var(--light-text);
+    margin-bottom: 3rem;
+}
+
+#latest-posts .btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+#latest-posts .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(32, 189, 255, 0.2);
+}
+
+#latest-posts .card-img-top {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#latest-posts .card:hover .card-img-top {
+    opacity: 1;
+}
+
+/* Ensure proper spacing for mobile */
+@media (max-width: 768px) {
+    #latest-posts {
+        padding: 3rem 0;
     }
-    footer {
-      background-color: #343a40;
-      color: white;
-      padding: 30px 0;
+    
+    #latest-posts .card {
+        margin-bottom: 2rem;
     }
-    footer a {
-      color: #1cc88a;
-      text-decoration: none;
-    }
+}
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Peak Sales</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <!-- <li class="nav-item"><a class="nav-link" href="case-studies.html">case-studies</a></li> -->
-        </ul>
-      </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="Peak Sales Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+      Peak Sales
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-center">
-    <div class="container">
-      <h1 class="display-5 fw-bold">Our Blog</h1>
-      <p class="lead">Stay updated with the latest trends and insights in sales strategies and techniques.</p>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-4">Recent Articles</h2>
-      <div class="row g-4">
-        <!-- Blog Post 1 -->
-        <div class="col-md-4">
-          <div class="card blog-card">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 1">
-            <div class="card-body">
-              <h5 class="card-title">Top 5 Sales Strategies for 2024</h5>
-              <p class="card-text">Discover the best sales techniques to boost your performance in the upcoming year.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Post 2 -->
-        <div class="col-md-4">
-          <div class="card blog-card">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 2">
-            <div class="card-body">
-              <h5 class="card-title">How to Generate Quality Leads</h5>
-              <p class="card-text">Learn effective lead-generation strategies to attract the right audience.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Blog Post 3 -->
-        <div class="col-md-4">
-          <div class="card blog-card">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Blog Post 3">
-            <div class="card-body">
-              <h5 class="card-title">The Power of CRM Tools</h5>
-              <p class="card-text">Understand how CRM tools can transform your sales process and improve efficiency.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
+<!-- Hero Section -->
+<section class="hero-section gradient-bg text-center" id="hero-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-4 fw-bold text-white-50">Peak Performance Blog</h1>
+        <p class="lead text-white-75">Stay updated with the latest trends and insights in sales strategies and techniques.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#latest-posts" class="btn btn-light btn-lg">Latest Posts</a>
+          <a href="#newsletter" class="btn btn-outline-light btn-lg">Subscribe</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Pagination -->
-  <section class="py-3">
-    <div class="container d-flex justify-content-center">
-      <nav>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
+<!-- Blog Posts Section -->
+<section id="latest-posts" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5" data-aos="fade-up">Latest Articles</h2>
+    <div class="row g-4">
+      <!-- Blog Post 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+        <article class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sales Strategies">
+          <div class="card-body">
+            <h3 class="card-title h5">Modern Sales Techniques</h3>
+            <p class="text-muted small">March 15, 2024</p>
+            <p class="card-text">Discover the latest sales strategies that are revolutionizing the industry in 2024.</p>
+            <a href="#" class="btn btn-primary">Read Article</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <article class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Customer Relations">
+          <div class="card-body">
+            <h3 class="card-title h5">Building Customer Relations</h3>
+            <p class="text-muted small">March 10, 2024</p>
+            <p class="card-text">Learn how to create lasting relationships with your customers through effective communication.</p>
+            <a href="#" class="btn btn-primary">Read Article</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <article class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sales Analytics">
+          <div class="card-body">
+            <h3 class="card-title h5">Data-Driven Sales</h3>
+            <p class="text-muted small">March 5, 2024</p>
+            <p class="card-text">Explore how analytics can transform your sales process and boost performance.</p>
+            <a href="#" class="btn btn-primary">Read Article</a>
+          </div>
+        </article>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="text-center">
-    <div class="container">
-      <p class="mb-0">© 2024 Peak Sales. All Rights Reserved.</p>
-      <small><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></small>
+<!-- Newsletter Section -->
+<section id="newsletter" class="cta-section gradient-bg">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-md-8" data-aos="fade-up">
+        <h2 class="fw-bold text-white-50 mb-4">Subscribe to Our Newsletter</h2>
+        <p class="lead text-white-75 mb-4">Get the latest sales insights delivered to your inbox</p>
+        <form class="row g-3 justify-content-center">
+          <div class="col-md-8">
+            <div class="input-group">
+              <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+              <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <!-- Company Overview Section -->
+    <div class="footer-section company-overview">
+      <a href="index.html">
+        <img src="assets/images/logo-white.png" alt="Peak Sales Logo" class="footer-logo" style="width: 40px; height: 40px; margin-right: 10px;">
+      </a>
+    </div>    
+    
+    <!-- Quick Links Section -->
+    <div class="footer-section quick-links">
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-list">
+        <li><a href="index.html#services-section">Services</a></li>
+        <li><a href="blog.html#latest-posts">Latest Articles</a></li>
+        <li><a href="blog.html#newsletter">Subscribe to our Newsletter</a></li>
+        <li><a href="contact.html#contact-form-section">Send Us a Message</a></li>
+        <li><a href="index.html">Home</a></li>        
+      </ul>
+    </div>
+    
+    <!-- Contact and Social Links Section -->
+    <div class="footer-section contact-social">
+      <h4 class="footer-heading">Connect with Us</h4>
+      <ul class="footer-list">
+        <li><a href="mailto:peakksales.in@gmail.com" aria-label="Email us">Email Us</a></li>
+        <li><a href="https://www.instagram.com/peaksales.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter X"><i class="fa-brands fa-x"></i> X (Twitter)</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal Section -->
+    <div class="footer-section legal">
+      <h4 class="footer-heading">Legal</h4>
+      <ul class="footer-list">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom text-center">
+    <p>&copy; 2024 Peak Sales. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+<!-- AOS and GSAP Initialization -->
+<script>
+  AOS.init();
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to("#hero-section", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: "#hero-section",
+      start: "top 80%",
+    },
+  });
+
+  gsap.utils.toArray(".card").forEach((card, index) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: index * 0.2,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+      },
+    });
+  });
+</script>
+
+<script src="assets/js/scripts.js"></script>
 </body>
 </html>
