@@ -284,7 +284,7 @@ console.log(`%c
     /         /
  __/ (  | (  |
 /__.-'|_|--|_|  
-exit console 🦖 and Type "dino" `, 'color: white; font-family: consolas; font-size: 14px;');
+exit console 🦖 and Type "dino" (only works on homepage)`, 'color: white; font-family: consolas; font-size: 14px;');
 
 
 document.addEventListener('DOMContentLoaded', function () {
